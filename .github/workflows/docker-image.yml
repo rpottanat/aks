@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag  rpottanat/shoppingapp:latest
     - name: Push the Docker image
-      run:  run: docker login -u rpottanat -p ${{ secrets.DOCKER_TOKEN }} && docker push rpottanat/shoppingapp:latest
+      run:  docker login -u rpottanat -p ${{ secrets.DOCKER_TOKEN }} && docker push rpottanat/shoppingapp:latest
